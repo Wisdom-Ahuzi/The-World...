@@ -41,7 +41,7 @@ mode.addEventListener('click', () => {
     });
 
     if (molder.src.includes(`/images/lightmode.svg`)) {
-        molder.src = "./images/svg";
+        molder.src = "./images/darkmode.svg";
     } else {
         molder.src = "./images/lightmode.svg";
     }
