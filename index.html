@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <title>The World...</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav class="nav-bar stubborn">
+        <div class="where">
+            <p>Where in the world?</p>
+        </div>
+
+        <div class="mode">
+            <img src="./images/svg" alt="Mode">
+            <p>Dark Mode</p>
+        </div>
+    </nav>
+
+
+    <div class="home show">
+
+        <div class="container-head ">
+            <div class="headers ">
+                <div class="search ">
+                    <img src="./images/magnifying-glass-solid.svg" id="sear" alt="search">
+                    <input class="stubborn" type="search" name="" id="searcher" placeholder="Search for a country">
+                </div>
+
+
+                <div class="filter ">
+                    <div class="datalist">
+                        <input class="stubborn" type="text" disabled placeholder="Filter by Region" />
+                        <img src="./images/chevron-up-solid.svg" class="up" alt="" id="arrUp">
+                    </div>
+
+                    <div class="filter-region stubborn ">
+                        <input class="items" type="text" placeholder="Africa"> <br>
+                        <input class="items" type="text" placeholder="America"> <br>
+                        <input class="items" type="text" placeholder="Asia"> <br>
+                        <input class="items" type="text" placeholder="Europe"> <br>
+                        <input class="items" type="text" placeholder="Oceania"> <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="main">
+            <div class="main-under">
+
+            </div>
+        </main>
+    </div>
+
+    <script src="./app.js"></script>
+    <script src="./dark_mode.js"></script>
+    <script src="./api.js"></script>
+</body>
+
+</html>
