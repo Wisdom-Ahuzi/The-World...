@@ -1,6 +1,8 @@
 const prms = window.location.href.slice(window.location.href.indexOf("?") + 1)
 const sp = new URLSearchParams(prms)
 
+console.log(sp);
+
 const name = sp.get("name");
 
 

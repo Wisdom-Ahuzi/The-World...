@@ -37,6 +37,13 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
 
+nav{
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    z-index: 10000000;
+}
+
 .nav-bar {
     width: 100%;
     height: 10vh;
@@ -55,6 +62,11 @@ body::-webkit-scrollbar-thumb {
     font-size: 150%;
     font-weight: 1000;
     font-family: 'Nunito Sans', sans-serif;
+}
+
+.nav-bar>.where>p >a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .nav-bar>.mode {
@@ -92,6 +104,7 @@ body::-webkit-scrollbar-thumb {
     margin-right: 6%;
     display: flex;
     justify-content: space-between;
+    margin-top: 165px;
 }
 
 .search {
@@ -114,6 +127,10 @@ body::-webkit-scrollbar-thumb {
     color: hsl(200, 15%, 8%);
     border: 2px solid hsl(0, 3%, 97%);
 
+}
+
+.search > input::placeholder{
+    color:inherit;
 }
 
 .search>img {
@@ -153,6 +170,10 @@ body::-webkit-scrollbar-thumb {
     border: 2px solid hsl(0, 3%, 97%);
 }
 
+.datalist>input::placeholder {
+    color: inherit;
+}
+
 .datalist>img {
     position: absolute;
     right: 7%;
@@ -165,7 +186,7 @@ body::-webkit-scrollbar-thumb {
 .filter-region {
     position: absolute;
     display: none;
-    top: 18%;
+    top: 20%;
     z-index: 6;
     border-radius: 4px;
     width: 200px;
@@ -176,6 +197,7 @@ body::-webkit-scrollbar-thumb {
     background-color: white;
 }
 
+
 .items {
     background-color: transparent;
     width: 100%;
@@ -183,11 +205,13 @@ body::-webkit-scrollbar-thumb {
     outline: none;
     border: none;
     padding-left: 8%;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 100;
     cursor: pointer;
     z-index: 79;
 }
+
+
 
 .show {
     display: block !important;
@@ -196,9 +220,6 @@ body::-webkit-scrollbar-thumb {
 .hide {
     display: none !important;
 }
-
-
-
 
 .main {
     width: 100%;
@@ -210,7 +231,7 @@ body::-webkit-scrollbar-thumb {
 
 .main-under {
     position: absolute;
-    top: 3%;
+    top: 13%;
     width: 92%;
     height: 100%;
     display: grid;
@@ -424,8 +445,8 @@ body::-webkit-scrollbar-thumb {
         outline: none;
         border: none;
         padding-left: 8%;
-        font-size: 15px;
-        font-weight: 550;
+        font-size: 14px;
+        font-weight: 100;
     }
 
     .show {
@@ -488,7 +509,14 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media screen and (min-width:300px) and (max-width:500px) {
+@media screen and (min-width:501px) and (max-width:767px) {
+    .filter-region {
+        margin-top: 48px ;
+    }
+}
+
+
+@media screen and (min-width:200px) and (max-width:500px) {
     .nav-bar {
         height: 15vh;
     }
@@ -523,6 +551,7 @@ body::-webkit-scrollbar-thumb {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        margin-top: 120px;
     }
 
     .search>input {
@@ -560,6 +589,7 @@ body::-webkit-scrollbar-thumb {
 
     .datalist {
         width: 59%;
+        margin-top: -40px;
     }
 
     .filter-region {
@@ -579,8 +609,8 @@ body::-webkit-scrollbar-thumb {
         outline: none;
         border: none;
         padding-left: 8%;
-        font-size: 15px;
-        font-weight: 550;
+        font-size: 14px;
+        font-weight: 100;
     }
 
     .show {
@@ -595,6 +625,7 @@ body::-webkit-scrollbar-thumb {
     .main-under {
         grid-template-columns: repeat(1, 1fr);
         margin-left: 25px;
+        margin-top: 20px;
     }
 
     .container {
@@ -621,6 +652,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     row-gap: 100px;
+    margin-top: 60px;
 }
 
 .back {
@@ -854,6 +886,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (min-width:300px) and (max-width:768px) {
+
+    .detail-wrapper {
+        margin-top: 150px;
+    }
+
     .back {
         width: 25%;
     }

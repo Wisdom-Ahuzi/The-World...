@@ -9,7 +9,7 @@ const capitalSelector = document.getElementsByClassName('capital');
 const parll = document.getElementsByClassName('changer');
 const deep = document.getElementsByClassName('boddo');
 
-mode.addEventListener('click', () => {
+const changeMode = () => {
     document.body.classList.toggle('dark-mode');
 
     for (const selectee of selector) {
@@ -51,4 +51,9 @@ mode.addEventListener('click', () => {
     } else {
         modeText.innerText = "Light Mode";
     }
+
+}
+
+mode.addEventListener('click', () => {
+    changeMode()
 });
