@@ -9,7 +9,10 @@ const capitalSelector = document.getElementsByClassName('capital');
 const parll = document.getElementsByClassName('changer');
 const deep = document.getElementsByClassName('boddo');
 
-const changeMode = () => {
+// let changeDarkMode = localStorage.getItem('changeDarkMode');
+
+
+const enableDarkMode = () => {
     document.body.classList.toggle('dark-mode');
 
     for (const selectee of selector) {
@@ -52,8 +55,78 @@ const changeMode = () => {
         modeText.innerText = "Light Mode";
     }
 
+    localStorage.setItem('changeDarkMode', 'enabled');
+
 }
 
+
+
+
+// const disableDarkMode = () => {
+//     document.body.classList.remove('dark-mode');
+
+//     for (const selectee of selector) {
+//         selectee.classList.remove('dark-mode-element');
+//     }
+
+//     for (const populater of populationSelector) {
+//         populater.classList.remove('span-class');
+//     }
+
+//     for (const regioner of regionSelector) {
+//         regioner.classList.remove('span-class');
+//     }
+
+//     for (const capitalia of capitalSelector) {
+//         capitalia.classList.remove('span-class');
+//     }
+
+//     for (const pallle of parll) {
+//         pallle.classList.remove('span-class');
+//     }
+
+//     for (const inter of deep) {
+//         inter.classList.remove('darker-mode');
+//     }
+
+//     stubber.forEach((stubee) => {
+//         stubee.classList.remove('darker-mode');
+//     });
+
+//     if (molder.src.includes(`/images/lightmode.svg`)) {
+//         molder.src = "./images/darkmode.svg";
+//     } else {
+//         molder.src = "./images/lightmode.svg";
+//     }
+
+//     if (modeText.innerText.includes(`Light Mode`)) {
+//         modeText.innerText = "Dark Mode";
+//     } else {
+//         modeText.innerText = "Light Mode";
+//     }
+
+//     localStorage.setItem('changeDarkMode', null);
+
+// }
+
+// if (changeDarkMode === 'enabled') {
+//     enableDarkMode();
+// }
+
 mode.addEventListener('click', () => {
-    changeMode()
+
+    // changeDarkMode = localStorage.getItem('changeDarkMode');
+
+
+    // if (changeDarkMode !== 'enabled') {
+        enableDarkMode()
+    // }
+    // else{
+    //     disableDarkMode()
+    // }
+    
+    
 });
+
+
+

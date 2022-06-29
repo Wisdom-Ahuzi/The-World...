@@ -1,7 +1,6 @@
 const prms = window.location.href.slice(window.location.href.indexOf("?") + 1)
 const sp = new URLSearchParams(prms)
 
-console.log(sp);
 
 const name = sp.get("name");
 
@@ -122,7 +121,10 @@ getCountries().then(res => {
     languages.innerText = `Languages: `;
 
     const spanLanguages = document.createElement('span');
-    spanLanguages.innerText = `${bana[0].name}`;
+    bana.forEach(element => {
+        spanLanguages.innerText = `${element.name}`;
+        console.log(element.name);
+    });
 
     const base = document.createElement('div');
     base.classList.add('base');

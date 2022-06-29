@@ -318,7 +318,7 @@ nav{
 }
 
 
-@media screen and (min-width:978px) and (max-width:1250px) {
+/* @media screen and (min-width:978px) and (max-width:1250px) {
     .filter {
         width: 23%;
         height: 20vh;
@@ -329,6 +329,7 @@ nav{
     .filter-region {
         width: 170px;
     }
+
 }
 
 
@@ -353,7 +354,45 @@ nav{
     .main-under {
         grid-template-columns: repeat(2, 1fr);
     }
+} */
+
+
+
+
+@media screen and (min-width:978px) and (max-width:1250px) {
+    .filter {
+        width: 23%;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .filter-region {
+        width: 170px;
+        margin-top: .5rem;
+    }
 }
+
+
+@media screen and (min-width:768px) and (max-width:978px) {
+    .search>input {
+        width: 38%;
+        padding-left: 8%;
+    }
+
+    .filter {
+        width: 30%;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .filter-region {
+        width: 170px;
+        margin-top: .4rem;
+    }
+}
+
 
 @media screen and (min-width:500px) and (max-width:768px) {
     .nav-bar {
@@ -473,45 +512,15 @@ nav{
         height: 32vh;
         object-fit: cover;
     }
-}
-
-
-
-@media screen and (min-width:978px) and (max-width:1250px) {
-    .filter {
-        width: 23%;
-        height: 20vh;
-        display: flex;
-        justify-content: center;
-    }
-
-    .filter-region {
-        width: 170px;
-    }
-}
-
-
-@media screen and (min-width:768px) and (max-width:978px) {
-    .search>input {
-        width: 38%;
-        padding-left: 8%;
-    }
-
-    .filter {
-        width: 30%;
-        height: 20vh;
-        display: flex;
-        justify-content: center;
-    }
-
-    .filter-region {
-        width: 170px;
-    }
-}
+} 
 
 @media screen and (min-width:501px) and (max-width:767px) {
     .filter-region {
-        margin-top: 48px ;
+        margin-top: 4rem ;
+    }
+
+    .main-under{
+        margin-top: 90px;
     }
 }
 
@@ -551,7 +560,7 @@ nav{
         display: flex;
         justify-content: center;
         flex-direction: column;
-        margin-top: 120px;
+        margin-top: 150px;
     }
 
     .search>input {
@@ -589,13 +598,14 @@ nav{
 
     .datalist {
         width: 59%;
-        margin-top: -40px;
+        margin-top: 0px;
     }
 
     .filter-region {
         position: absolute;
         display: none;
-        top: 33%;
+        /* top: 37%; */
+        margin-top: 10rem;
         z-index: 6;
         border-radius: 4px;
         width: 51%;
@@ -625,7 +635,7 @@ nav{
     .main-under {
         grid-template-columns: repeat(1, 1fr);
         margin-left: 25px;
-        margin-top: 50px;
+        margin-top: 100px;
     }
 
     .container {
