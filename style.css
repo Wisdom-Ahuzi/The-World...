@@ -595,7 +595,7 @@ nav{
     .filter-region {
         position: absolute;
         display: none;
-        top: 30%;
+        top: 33%;
         z-index: 6;
         border-radius: 4px;
         width: 51%;
@@ -625,7 +625,7 @@ nav{
     .main-under {
         grid-template-columns: repeat(1, 1fr);
         margin-left: 25px;
-        margin-top: 20px;
+        margin-top: 50px;
     }
 
     .container {
@@ -885,7 +885,7 @@ nav{
     }
 }
 
-@media screen and (min-width:300px) and (max-width:768px) {
+@media screen and (min-width:200px) and (max-width:768px) {
 
     .detail-wrapper {
         margin-top: 150px;
