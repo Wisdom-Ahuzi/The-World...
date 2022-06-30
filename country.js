@@ -15,6 +15,9 @@ const getCountries = async () => {
 }
 
 getCountries().then(res => {
+
+    console.log(res);
+
     const mainInnerInner = document.querySelector('.main-inner-inner')
 
     const bana = res[0].languages;

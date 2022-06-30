@@ -9,10 +9,13 @@ const capitalSelector = document.getElementsByClassName('capital');
 const parll = document.getElementsByClassName('changer');
 const deep = document.getElementsByClassName('boddo');
 
-// let changeDarkMode = localStorage.getItem('changeDarkMode');
+let changeDarkMode = localStorage.getItem('changeDarkMode');
 
 
 const enableDarkMode = () => {
+
+    localStorage.setItem('changeDarkMode', 'enabled');
+
     document.body.classList.toggle('dark-mode');
 
     for (const selectee of selector) {
@@ -54,15 +57,15 @@ const enableDarkMode = () => {
     } else {
         modeText.innerText = "Light Mode";
     }
-
-    localStorage.setItem('changeDarkMode', 'enabled');
-
 }
 
 
 
 
 // const disableDarkMode = () => {
+
+//     localStorage.setItem('changeDarkMode', null);
+
 //     document.body.classList.remove('dark-mode');
 
 //     for (const selectee of selector) {
@@ -105,7 +108,6 @@ const enableDarkMode = () => {
 //         modeText.innerText = "Light Mode";
 //     }
 
-//     localStorage.setItem('changeDarkMode', null);
 
 // }
 
@@ -114,18 +116,15 @@ const enableDarkMode = () => {
 // }
 
 mode.addEventListener('click', () => {
-
+    
+    enableDarkMode()
     // changeDarkMode = localStorage.getItem('changeDarkMode');
 
-
     // if (changeDarkMode !== 'enabled') {
-        enableDarkMode()
-    // }
-    // else{
+        // console.log('fufilled');
+    // }else{
     //     disableDarkMode()
     // }
-    
-    
 });
 
 

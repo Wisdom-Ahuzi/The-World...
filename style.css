@@ -125,8 +125,8 @@ nav{
     font-family: 'Overpass', sans-serif;
     border-radius: 5px;
     color: hsl(200, 15%, 8%);
-    border: 2px solid hsl(0, 3%, 97%);
-
+    /* border: 2px solid hsl(0, 3%, 97%); */
+    border: 3px solid hsl(0, 3%, 94%);
 }
 
 .search > input::placeholder{
@@ -167,7 +167,9 @@ nav{
     font-weight: 500;
     box-shadow: 3px 3px 3px hsla(0, 2%, 82%, 0.896);
     border-radius: 5px;
-    border: 2px solid hsl(0, 3%, 97%);
+    /* border: 2px solid hsl(0, 3%, 97%); */
+    border: 3px solid hsl(0, 3%, 94%);
+
 }
 
 .datalist>input::placeholder {
@@ -193,7 +195,8 @@ nav{
     z-index: 79;
     box-shadow: 3px 3px 3px hsla(0, 2%, 82%, 0.896);
     border-radius: 5px;
-    border: 2px solid hsl(0, 3%, 97%);
+    /* border: 2px solid hsl(0, 3%, 97%); */
+    border: 3px solid hsl(0, 3%, 94%);
     background-color: white;
 }
 
@@ -293,7 +296,7 @@ nav{
     background-color: hsl(207, 26%, 17%) !important;
     transition: all .1s ease-in !important;
     color: hsl(0, 7%, 91%) !important;
-    box-shadow: 3px 2px 3px hsla(208, 21%, 14%, 0.706) !important;
+    /* box-shadow: 3px 2px 3px hsla(208, 21%, 14%, 0.706) !important; */
 }
 
 .darker-mode {
@@ -369,7 +372,7 @@ nav{
 
     .filter-region {
         width: 170px;
-        margin-top: .5rem;
+        margin-top: .4rem;
     }
 }
 
@@ -516,7 +519,7 @@ nav{
 
 @media screen and (min-width:501px) and (max-width:767px) {
     .filter-region {
-        margin-top: 4rem ;
+        margin-top: 3.5rem ;
     }
 
     .main-under{
@@ -605,7 +608,7 @@ nav{
         position: absolute;
         display: none;
         /* top: 37%; */
-        margin-top: 10rem;
+        margin-top: 9.3rem;
         z-index: 6;
         border-radius: 4px;
         width: 51%;
@@ -678,6 +681,7 @@ nav{
     height: 60%;
     background-color: hsl(0, 0%, 98%);
     box-shadow: 3px 3px 3px hsla(0, 3%, 85%, 0.838);
+    border: 3px solid hsl(0, 3%, 94%);
     display: flex;
     align-items: center;
     justify-content: space-evenly;

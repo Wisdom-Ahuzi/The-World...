@@ -113,6 +113,7 @@ getCountries().then(data => {
     const regionFilter = document.querySelectorAll('.items');
     const reFi = Array.from(regionFilter);
 
+    // Potential work on if else, if else statements
     defence.forEach((defend) => {
         reFi.forEach((reLii, index) => {
             const regionizer = defend.lastElementChild.lastElementChild.childNodes[1].lastElementChild;
