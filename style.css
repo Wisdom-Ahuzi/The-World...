@@ -296,7 +296,6 @@ nav{
     background-color: hsl(207, 26%, 17%) !important;
     transition: all .1s ease-in !important;
     color: hsl(0, 7%, 91%) !important;
-    /* box-shadow: 3px 2px 3px hsla(208, 21%, 14%, 0.706) !important; */
 }
 
 .darker-mode {
@@ -321,45 +320,6 @@ nav{
 }
 
 
-/* @media screen and (min-width:978px) and (max-width:1250px) {
-    .filter {
-        width: 23%;
-        height: 20vh;
-        display: flex;
-        justify-content: center;
-    }
-
-    .filter-region {
-        width: 170px;
-    }
-
-}
-
-
-@media screen and (min-width:768px) and (max-width:978px) {
-    .search>input {
-        width: 38%;
-        padding-left: 8%;
-    }
-
-    .filter {
-        width: 30%;
-        height: 20vh;
-        display: flex;
-        justify-content: center;
-    }
-
-    .filter-region {
-        width: 170px;
-
-    }
-
-    .main-under {
-        grid-template-columns: repeat(2, 1fr);
-    }
-} */
-
-
 
 
 @media screen and (min-width:978px) and (max-width:1250px) {
@@ -374,6 +334,11 @@ nav{
         width: 170px;
         margin-top: .4rem;
     }
+
+    .container>.img>img {
+        height: 15vh;
+        object-fit: cover;
+    }
 }
 
 
@@ -393,6 +358,15 @@ nav{
     .filter-region {
         width: 170px;
         margin-top: .4rem;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .container>.img>img {
+        height: 15vh;
+        object-fit: cover;
     }
 }
 
@@ -508,7 +482,6 @@ nav{
 
     .container {
         height: 470px;
-
     }
 
     .container>.img>img {
@@ -634,16 +607,15 @@ nav{
         display: none !important;
     }
 
-
     .main-under {
         grid-template-columns: repeat(1, 1fr);
-        margin-left: 25px;
+        margin-left: 0px;
         margin-top: 100px;
     }
 
     .container {
         height: 420px;
-
+        margin-left: 28px;
     }
 
     .container>.img>img {
@@ -724,6 +696,7 @@ nav{
     width: 50%;
     height: 50%;
     display: flex;
+    position: relative;
 }
 
 .more>.more-details {
@@ -749,6 +722,7 @@ nav{
     align-items: center;
     display: flex;
     justify-content: space-between;
+
 }
 
 .middle-detail>.inner-middle-detail-one {
@@ -786,11 +760,11 @@ nav{
 
 
 .base {
-    width: 75%;
     display: flex;
-    align-items: center;
+    align-items:inherit;
+    width: 100%;
     height: 10%;
-    justify-content: space-between;
+    margin-top: 5%;
 }
 
 .border-countries {
@@ -798,6 +772,8 @@ nav{
     font-weight: 600;
     font-size: 17px;
     color: rgb(17, 17, 17);
+    position: absolute;
+    top: 18.5rem;
 }
 
 .base>div:not(.border-countries) {
@@ -806,15 +782,16 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid hsl(0, 0%, 98%);
     background-color: hsl(0, 0%, 98%);
     box-shadow: 3px 3px 3px hsla(0, 3%, 85%, 0.838);
+    border: 2px solid hsl(0, 3%, 94%);
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 3px;
+    margin-right: 10px;
 }
 
-@media screen and (min-width:979px) and (max-width:1260px) {
+@media screen and (min-width:979px) and (max-width:1500px) {
     .country-image>img {
         width: 110%;
         height: 50%;
@@ -828,6 +805,17 @@ nav{
     .base {
         width: 100%;
         height: 12%;
+        position: relative;
+        /* top: 30rem; */
+        top: 3rem;
+        left: 0rem;
+    }
+
+    
+    .border-countries {
+        font-size: 22px;
+        top: -3rem;
+        left: 0rem;
     }
 }
 
@@ -858,6 +846,7 @@ nav{
         width: 80%;
         height: 100%;
         flex-direction: column;
+        position: relative;
     }
 
     .more>.more-details {
@@ -892,10 +881,16 @@ nav{
     .base {
         width: 110%;
         height: 12%;
+        position: relative;
+        /* top: 30rem; */
+        top: 3rem;
+        left: 0rem;
     }
 
     .border-countries {
         font-size: 22px;
+        top: -3rem;
+        left: 0rem;
     }
 }
 
@@ -929,6 +924,7 @@ nav{
         width: 80%;
         height: 100%;
         flex-direction: column;
+        position: relative;
     }
 
     .more>.more-details {
@@ -970,10 +966,20 @@ nav{
     .base {
         width: 100%;
         height: 12%;
+        display: flex;
+        align-items:inherit;
+        margin-top: 5%;
+        position: absolute;
+        bottom: 0;
+        left: 5rem;
     }
+
+  
 
     .border-countries {
         font-size: 20px;
+        top: 0;
+        left: -5.5rem;
     }
 
     .base>div:not(.border-countries) {

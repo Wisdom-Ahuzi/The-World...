@@ -16,8 +16,6 @@ const getCountries = async () => {
 
 getCountries().then(res => {
 
-    console.log(res);
-
     const mainInnerInner = document.querySelector('.main-inner-inner')
 
     const bana = res[0].languages;
@@ -114,21 +112,26 @@ getCountries().then(res => {
     currencies.classList.add('changer');
     currencies.innerText = `Currencies:`
 
-    const spanCurrencies = document.createElement('span');
-
-    spanCurrencies.innerText = `${mala[0].name}`;
+    mala.forEach((mal) => {
+        const spanCurrencies = document.createElement('span');
+        spanCurrencies.innerText = `${mal.name}`;
+        currencies.appendChild(spanCurrencies);
+    })
 
     const languages = document.createElement('p');
     languages.classList.add('Languages');
     languages.classList.add('changer');
     languages.innerText = `Languages: `;
 
-    const spanLanguages = document.createElement('span');
-    bana.forEach(element => {
-        spanLanguages.innerText = `${element.name}`;
-        console.log(element.name);
+
+
+    bana.forEach(ba => {
+        const spanLanguages = document.createElement('span');
+        spanLanguages.innerText = `${ba.name}, `;
+        languages.appendChild(spanLanguages);
     });
 
+    
     const base = document.createElement('div');
     base.classList.add('base');
 
@@ -138,43 +141,18 @@ getCountries().then(res => {
     const borderPara = document.createElement('p');
     borderPara.classList.add('changer')
     borderPara.innerText = `Border Countries:`;
-
-
-    const borderOne = document.createElement('div');
-    const borderOnePara = document.createElement('p');
-    const borderTwo = document.createElement('div');
-    const borderTwoPara = document.createElement('p');
-    const borderThree = document.createElement('div');
-    const borderThreePara = document.createElement('p');
-
-
-
-    const borderman = [res.borders];
-    Array.from(borderman);
-
-
-    borderOne.classList.add('border-one');
-    borderOne.classList.add('stubborn');
-    borderOne.classList.add('changer');
-    borderOne.classList.add('boddo');
-
-    borderOnePara.innerText = `${badda[0]}`;
-
-
-    borderTwo.classList.add('border-two');
-    borderTwo.classList.add('stubborn');
-    borderTwo.classList.add('changer');
-    borderTwo.classList.add('boddo');
-
-    borderTwoPara.innerText = `${badda[1]}`;
-
-
-    borderThree.classList.add('border-three');
-    borderThree.classList.add('stubborn');
-    borderThree.classList.add('changer');
-    borderThree.classList.add('boddo');
-
-    borderThreePara.innerText = `${badda[2]}`;
+    
+    badda.forEach((bard) => {
+        const borderOne = document.createElement('div');
+        const borderOnePara = document.createElement('p');
+        borderOne.classList.add('border-one');
+        borderOne.classList.add('stubborn');
+        borderOne.classList.add('changer');
+        borderOne.classList.add('boddo');
+        borderOnePara.innerText = `${bard}`;
+        borderOne.appendChild(borderOnePara);
+        base.appendChild(borderOne);
+    })
 
     countryImageTwo.appendChild(imageDivTwo);
     topDetails.appendChild(countryPara);
@@ -195,24 +173,19 @@ getCountries().then(res => {
     innerMiddleDetailOne.appendChild(nativeSubregion);
     innerMiddleDetailOne.appendChild(nativeCapital);
     topDomain.appendChild(spanDomain);
-    currencies.appendChild(spanCurrencies);
-    languages.appendChild(spanLanguages);
     innerMiddleDetailTwo.appendChild(topDomain);
     innerMiddleDetailTwo.appendChild(currencies);
     innerMiddleDetailTwo.appendChild(languages);
     borderCountries.appendChild(borderPara);
-    borderOne.appendChild(borderOnePara);
-    borderTwo.appendChild(borderTwoPara);
-    borderThree.appendChild(borderThreePara);
     base.appendChild(borderCountries);
-    base.appendChild(borderOne);
-    base.appendChild(borderTwo);
-    base.appendChild(borderThree);
     mainInnerInner.appendChild(countryImageTwo);
     mainInnerInner.appendChild(moreDiv);
+
+    
 }).catch((err) => {
     console.log('Error', err);
 });
+
 
 const back = document.querySelector('.inner-back');
 back.addEventListener('click', () => {

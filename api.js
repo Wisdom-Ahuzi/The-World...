@@ -95,12 +95,12 @@ getCountries().then(data => {
     const finder = document.querySelector('#searcher');
 
     finder.addEventListener('keyup', () => {
-        const searchedValue = finder.value;
+        const searchedValue = finder.value.toLowerCase();
 
         mana.forEach((one) => {
-            if (!one.innerText.includes(searchedValue)) {
+            if (!one.innerText.toLowerCase().includes(searchedValue)){
                 one.parentElement.parentElement.classList.add('filtered')
-            } else if (one.innerText.includes(searchedValue)) {
+            } else{
                 one.parentElement.parentElement.classList.remove('filtered');
                 one.parentElement.parentElement.classList.add('unfiltered');
             }
@@ -117,7 +117,8 @@ getCountries().then(data => {
     defence.forEach((defend) => {
         reFi.forEach((reLii, index) => {
             const regionizer = defend.lastElementChild.lastElementChild.childNodes[1].lastElementChild;
-            reLii.addEventListener('click', () => {
+            reLii.addEventListener('click',() => {
+
                 if (index === 0 && regionizer.innerText !== 'Africa') {
                     const africaFilter = regionizer.parentElement.parentElement.parentElement.parentElement;
                     africaFilter.classList.add('filtered');
