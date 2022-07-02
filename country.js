@@ -154,6 +154,8 @@ getCountries().then(res => {
         base.appendChild(borderOne);
     })
 
+    
+
     countryImageTwo.appendChild(imageDivTwo);
     topDetails.appendChild(countryPara);
     moreDiv.appendChild(moreDetails);

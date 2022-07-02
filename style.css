@@ -249,7 +249,7 @@ nav{
     border-radius: 7px;
     cursor: pointer;
     box-shadow: 3px 3px 3px hsla(0, 3%, 94%, 0.896);
-    border-radius: 5px;
+    border-radius: 15px;
     border: 2px solid hsla(0, 3%, 94%, 0.896);
     background-color: white;
 }
@@ -318,9 +318,6 @@ nav{
     color: hsl(0, 7%, 91%) !important;
     transition: all .1s ease-in !important;
 }
-
-
-
 
 @media screen and (min-width:978px) and (max-width:1250px) {
     .filter {
@@ -657,7 +654,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .inner-back>img {
@@ -787,7 +784,7 @@ nav{
     border: 2px solid hsl(0, 3%, 94%);
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 3px;
+    border-radius: 5px;
     margin-right: 10px;
 }
 
@@ -971,14 +968,18 @@ nav{
         margin-top: 5%;
         position: absolute;
         bottom: 0;
-        left: 5rem;
+        left: 5.4rem;
+        margin-bottom: 50px;
     }
 
+    .border-one:first-child{
+        margin-left: .8rem !important;
+    }
   
 
     .border-countries {
         font-size: 20px;
-        top: 0;
+        top: 1.3rem;
         left: -5.5rem;
     }
 
@@ -989,7 +990,7 @@ nav{
         padding-left: 0px;
         padding-right: 0px;
         margin-right: 15px;
-        border-radius: 3px;
+        border-radius: 5px;
         position: relative;
         top: 55px;
         right: 100px;
