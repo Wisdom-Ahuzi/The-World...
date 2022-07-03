@@ -110,7 +110,7 @@ getCountries().then(res => {
     const currencies = document.createElement('p');
     currencies.classList.add('currencies');
     currencies.classList.add('changer');
-    currencies.innerText = `Currencies:`
+    currencies.innerText = `Currencies: `
 
     mala.forEach((mal) => {
         const spanCurrencies = document.createElement('span');
@@ -140,7 +140,7 @@ getCountries().then(res => {
 
     const borderPara = document.createElement('p');
     borderPara.classList.add('changer')
-    borderPara.innerText = `Border Countries:`;
+    borderPara.innerText = `Border Countries: `;
     
     badda.forEach((bard) => {
         const borderOne = document.createElement('div');

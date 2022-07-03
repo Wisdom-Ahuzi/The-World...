@@ -38,7 +38,7 @@ getCountries().then(data => {
 
         const firstPara = document.createElement('p');
         firstPara.classList.add('population');
-        firstPara.innerText = `Population:`;
+        firstPara.innerText = `Population: `;
         const firstSpan = document.createElement('span');
         firstSpan.classList.add('span');
         firstSpan.setAttribute('id', 'population');
@@ -58,7 +58,7 @@ getCountries().then(data => {
 
         const thirdPara = document.createElement('p');
         thirdPara.classList.add('capital');
-        thirdPara.innerText = `Capital:`;
+        thirdPara.innerText = `Capital: `;
         const thirdSpan = document.createElement('span');
         thirdSpan.classList.add('span');
         thirdSpan.setAttribute('id', 'capital');
@@ -118,23 +118,61 @@ getCountries().then(data => {
         reFi.forEach((reLii, index) => {
             const regionizer = defend.lastElementChild.lastElementChild.childNodes[1].lastElementChild;
             reLii.addEventListener('click',() => {
-
                 if (index === 0 && regionizer.innerText !== 'Africa') {
                     const africaFilter = regionizer.parentElement.parentElement.parentElement.parentElement;
                     africaFilter.classList.add('filtered');
-                } else if (index === 1 && regionizer.innerText !== 'Americas') {
+
+                    if (index === 0 && regionizer.innerText === 'Africa') {
+                        const africaFiltered = regionizer.parentElement.parentElement.parentElement.parentElement;
+                        africaFiltered.classList.remove('filtered')
+                        africaFiltered.classList.add('unfiltered')
+                    } 
+                }else 
+
+                if (index === 1 && regionizer.innerText !== 'Americas') {
                     const americasFilter = regionizer.parentElement.parentElement.parentElement.parentElement;
                     americasFilter.classList.add('filtered');
-                } else if (index === 2 && regionizer.innerText !== 'Asia') {
+
+                    if (index === 0 && regionizer.innerText === 'Americas') {
+                        const americasFiltered = regionizer.parentElement.parentElement.parentElement.parentElement;
+                        americasFiltered.classList.remove('filtered')  
+                        americasFiltered.classList.add('unfiltered')
+                    }
+                }else
+
+                if (index === 2 && regionizer.innerText !== 'Asia') {
                     const asiaFilter = regionizer.parentElement.parentElement.parentElement.parentElement;
                     asiaFilter.classList.add('filtered');
-                } else if (index === 3 && regionizer.innerText !== 'Europe') {
+
+                    if (index === 0 && regionizer.innerText === 'Asia') {
+                        const asiaFiltered = regionizer.parentElement.parentElement.parentElement.parentElement;
+                        asiaFiltered.classList.remove('filtered')
+                        asiaFiltered.classList.add('unfiltered')
+                    }
+                }else
+
+                if (index === 3 && regionizer.innerText !== 'Europe') {
                     const europeFilter = regionizer.parentElement.parentElement.parentElement.parentElement;
                     europeFilter.classList.add('filtered');
-                } else if (index === 4 && regionizer.innerText !== 'Oceania') {
+
+                    if (index === 0 && regionizer.innerText === 'Europe') {
+                        const europeFiltered = regionizer.parentElement.parentElement.parentElement.parentElement;
+                        europeFiltered.classList.remove('filtered')
+                        europeFiltered.classList.add('unfiltered')
+                    }
+                }else
+                
+                if (index === 4 && regionizer.innerText !== 'Oceania') {
                     const oceaniaFilter = regionizer.parentElement.parentElement.parentElement.parentElement;
                     oceaniaFilter.classList.add('filtered');
+
+                    if (index === 0 && regionizer.innerText === 'Oceania') {
+                        const oceaniaFiltered = regionizer.parentElement.parentElement.parentElement.parentElement;
+                        oceaniaFiltered.classList.remove('filtered')
+                        oceaniaFiltered.classList.add('unfiltered')
+                    }
                 }
+
             });
         });
     });
